@@ -8,11 +8,20 @@
     <link rel = "stylesheet" href ="stylesheet.css" type = "text/css" />
     <style>
         h1 {text-shadow:5px 5px 3px red}
+        @font-face {font-family:'fancyfont'; src:url(fancyfont.otf)}
+    h1{font-family:'fancyfont'}
     </style>
+   
 </head>
 <body>
     <h1>All about Roger</h1>
     <p>My hometown in United States is <b>Seattle</b>, and you could best contact me by email or in-person</p>
+    <p>Try clicking on <b>Washington State</b> and <b>Massachusetts</b></p>
+    <img src="USmap.jpg" usemap="#image-map">
+<map name="image-map">
+    <area target="_blank" alt="My Home Town" title="My Home Town" href="https://visitseattle.org/" coords="129,4,280,131" shape="rect">
+    <area target="_blank" alt="Where I currently am" title="Where I currently am" href="https://www.boston.com/" coords="1356,250,1438,271" shape="rect">
+</map>
     <hr>
     <img src="Roger_Lin_picture.jfif" alt="picture of Roger" />
     <a href="interest.html">His Interests</a>
