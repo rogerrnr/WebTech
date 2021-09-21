@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href ="stylesheet.css" type = "text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet">
+    
+        
+    <style>
+        /* h1 {font-family:'Bonheur Royal', cursive} */
+        /* body {background-color:orange;float:left;padding-right:10px;padding-left:10px;border-style:dotted;}   */
+        .Nav_Bar {position: sticky; top: 0px; left: 0px; width: 100%;}
+        .Nav_Bar ul {list-style-type: none; margin: 0; padding: 0; overflow: auto; background-color: rgb(50, 50, 50); border-radius: 5px;}
+        .Nav_Bar li {float: left;}
+        .Nav_Bar li a {display: inline-block; color: white; text-align: center; padding: 15px; text-decoration: none; min-width: 100px; font-weight:lighter;}
+        .Nav_Bar a.Active {background-color: darkred;}
+        .Nav_Bar li a:hover, .Nav_Bar a.Active:hover {background-color: red;}
+        .Nav_Bar .Dropdown_Content {display: none; position: absolute; background-color: rgb(50, 50, 50); min-width: 100px; z-index: 1; }
+        .Nav_Bar .Dropdown_Content a {display: block; text-align: left;}
+        .Nav_Bar li.Dropdown:hover .Dropdown_Content {display: block;}
+
+        h1 {text-align:center; font-family:impact; font-size:32pt;}
+        p {font-family:'Times New Roman', Times, serif; font-size:18pt; color:black;}
+        span {font-weight:800;font-style:italic}
+        h2 {text-align:center; }
+        .interests a:hover{font-size:120%}
+        .backcolor1{background-color:palegreen}
+        .backcolor2{background-color:paleturquoise}
+        .backcolor3{background-color:palevioletred}
+        /* div {position: absolute; top:0 px; left: 10px; width: 250px;} */
+    </style>
+</head>
+
+<body>
+    <h1 style = "font-family:Bonheur Royale;">My Interest</h1>
+    <div class = "Nav_Bar">
+        <ul>
+            <li>
+                <a href ="index.html" class = "Active">Home</a>
+            </li>
+            <li class="Dropdown">
+                <a>My Interests</a>
+                    <div class="Dropdown_Content"> 
+                        <a href="#golf">Golf</a>
+                        <a href="#run">Run</a>
+                        <a href="#read">Read</a>
+                    </div>
+            </li>
+            <li class="Dropdown">
+                <a href="https://www.searchenginejournal.com/alternative-search-engines/271409/">Search Engines</a>
+                  <div class="Dropdown_Content">
+                      <a href="http://www.google.com">Google</a>
+                      <a href="http://www.bing.com">Bing</a>
+                  </div>
+              </li>
+
+        </ul>
+    </div>
+    <!--I talk about my interests here-->
+    
+    <p class='interests'><a href="#golf">Golf</a>, <a href="#read">Read</a>, <a href="#run">Run</a></p>
+    
+    <div class="backcolor1">
+    <h2 id='golf'>Golf</h2>
+    <img src="https://media.newyorker.com/photos/5ca4cca0c6227255f321a328/2:1/w_2560,h_1280,c_limit/Cassidy-TrumpGolfCheating.jpg" alt="picture of golfing" width="250" />
+    <p>I have <span>golf</span>ed for 15 years and I am currently 5&lt; handicap player</p>
+</div>
+    <div class="backcolor2">
+    <h2 id='read'><span>Read</span></h2>
+    <a href="https://z-lib.org/" target="_blank">Where I get my free books</a>
+    <ul>
+        <li style="font-family:Bonheur Royale;">Books I am currently reading:
+            <ul>
+                <li>The 48 Laws of Power</li>
+                <li>Freudian Social Psychology</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+    <div class="backcolor3">
+    <h2 id='run'>Run</h2>
+    <p>I like running because pain is gain</p>
+</div>
+</body>
+</html>
