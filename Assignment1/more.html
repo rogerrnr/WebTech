@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href ="stylesheet.css" type = "text/css" />
+    <title>Learn More About Paris</title>
+    <style>
+        h1 {text-align:center; font-family:Garamond; font-size:25pt;}
+        .Nav_Bar {position: sticky; top: 0px; left: 0px; width: 100%;}
+        .Nav_Bar ul {list-style-type: none; margin: 0; padding: 0; overflow: auto; background-color: rgb(50, 50, 50); border-radius: 5px;}
+        .Nav_Bar li {float: left;}
+        .Nav_Bar li a {display: inline-block; color: white; text-align: center; padding: 15px; text-decoration: none; min-width: 100px; font-weight:lighter;}
+        .Nav_Bar a.Active {background-color:#318ce7;}
+        .Nav_Bar li a:hover, .Nav_Bar a.Active:hover {background-color: red;}
+        .Nav_Bar .Dropdown_Content {display: none; position: absolute; background-color: rgb(50, 50, 50); min-width: 100px; z-index: 1; }
+        .Nav_Bar .Dropdown_Content a {display: block; text-align: left;}
+        .Nav_Bar li.Dropdown:hover .Dropdown_Content {display: block;}
+        table{
+            width:400px; border: 1px solid black; margin-left: auto; margin-right: auto;
+        }
+        td{border:1px solid silver}
+        ul{
+            margin-left: 125px;
+            font-size: 18pt;
+        }
+        span{font-style:italic}
+        p{
+            padding-top: 50px;
+        }
+        .backcolor1{background-color:white}
+    </style>
+</head>
+
+<body>
+    <div class = "Nav_Bar">
+        <ul>
+            <li>
+                <a href ="index.html" class = "Active">Home</a>
+            </li>
+            <li class="Dropdown">
+                <a>Learn More</a>
+                    <div class="Dropdown_Content"> 
+                        <a href="#Architecture">Architecture</a>
+                        <a href="#Arts">Arts</a>
+                        <a href="#Food">Food</a>
+                    </div>
+            </li>
+        </ul>
+    </div>
+<h1>All About Paris</h1>
+<h2 id='Architecture'>
+    Architecutre
+</h2>
+<img src="louvre.jpg" alt = "louvre" class = "center" style = "padding-bottom: 50px"/>
+<p style = "margin-right:50px">Except for Effiel Tower, there are many beautiful architectures in Paris, one of the most famous buildings in the world is the Louvre Museum. It is the world's second largest art museum and a historic monument in Pairs. It is best known for being the home of the <span>"Mona Lisa"</span>.</p>
+<p style = "margin-right:50px">Since the opening of Agusut 10th, 1793 with an exhibition of 537 paintings, it has expanded greatly under Napoleon's ruling. Now the Louvre Museum contains more than 380,00 objects and siplays 35,000 works of art with 60,600 square metres, the Louvre has been the undisputed "most popular museum" in the world. (Wikipedia)</p>
+
+<ul>
+    <li>
+      <div>Other Famous Architectures in Paris</div>
+      <ul>
+        <li>Notre Dame Cathedral</li>
+        <li>Museum of d'Orsay</li>
+        <li>Palais Garnier, National Opera of Paris</li>
+        <li>Arc de Triomphe</li>
+      </ul>
+    </li>
+  </ul>
+<h2 id='Arts'>
+    Arts
+</h2>
+<div class="backcolor1">
+<img src = "Mona_Lisa.jpg" alt = "MonaLisa" style="width:25%" class = "center"/>
+<img src = "liberty_leading.jpg" alt = "Liberty Leading" style="width:45%" />
+</div>
+<p style="clear:left"><span>Mona Lisa</span> and <span>Liberty Leading</span> are few of the most famous paintings in the world, and there are many more valuable paintings that can only be seens in Paris. Such as the self-portrait of Van Gogh, The Church at Auvers by Van Gogh and Impression, Sunrise by Calude Monet. To see more painting that can only be viewed in Paris, you can click <a href="https://theculturetrip.com/europe/france/paris/articles/10-world-famous-paintings-you-can-only-see-in-paris/" target="blank">here</a> to check it out!(Culture Trip)</p>
+
+<h2 id = "Food" style="clear:left"> 
+    Food
+</h2>
+<p>Paris has always had a long culinatry history and it attracted top chefs from all over the world. According to many blogs, there are many options to experience the extraordinary food in Paris. I am planning to do some of my own research and attend food tours in Paris! Below is a table of food I would love to try in Paris. </p>
+
+<table>
+    <tr>
+        <td colspan="3" style="font-size:18pt;font-style:italic;text-align:center">
+            Foodie in Paris!
+        </td>
+    </tr>
+    <tr>
+        <td style = "font-size: 16pt;">Food Type</td>
+        <td style = "font-size: 16pt;">Food Name</td>
+        <td style = "font-size: 16pt;">Get it at...?</td>
+    </tr>
+    <tr>
+        <td>Pastry</td>
+        <td>Baguettes</td>
+        <td>Grenier à Pain</td>
+    </tr>
+    <tr>
+        <td>Pastry</td>
+        <td>Croissants</td>
+        <td>Boulangerie au 140</td>
+    </tr>
+    <tr>
+        <td>Dessert</td>
+        <td>Macarons</td>
+        <td>Everywhere!</td>
+    </tr>
+    <tr>
+        <td>Sandwich</td>
+        <td>Falafel</td>
+        <td>L’As du Fallafel</td>
+    </tr>
+    <tr>
+        <td>Entree</td>
+        <td>Steak Frites</td>
+        <td>Le Relais de l’Entrecôte</td>
+    </tr>
+</table>
+</body>
+</html>
