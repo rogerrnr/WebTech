@@ -1,4 +1,4 @@
-/* we did not learn how to center a picture on the page. We did not learn display: blocks and clear: left; I found the code below from W3school (and I thoroughly understand how it works)*/
+/* we did not learn how to center a picture on the page. I found the code below from W3school (and I thoroughly understand how it works)*/
 
 body {background-color: #d5f7f7}
 .center {
@@ -17,7 +17,7 @@ p {
     }
 
 img {
-    /* float:left; */
+    float:left;
     margin-right: 50px;
     
 }

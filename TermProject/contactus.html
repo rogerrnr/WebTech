@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris</title>
+    <link rel = "stylesheet" href ="stylesheet.css" type = "text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet">
+    
+    <style>
+         .Nav_Bar {position: sticky; top: 0px; left: 0px; width: 100%;}
+        .Nav_Bar ul {list-style-type: none; margin: 0; padding: 0; overflow: auto; background-color: rgba(255,255,255,0.9); border-radius: 5px;}
+        .Nav_Bar li {float: left;}
+        .Nav_Bar li a {display: inline-block; color: black; text-align: center; padding: 15px; text-decoration: none; min-width: 100px; font-weight:lighter;}
+        .Nav_Bar a.Active {background-color:rgba(255,255,255,0.9);}
+        .Nav_Bar li a:hover, .Nav_Bar a.Active:hover {background-color: #318ce7;}
+        .Nav_Bar .Dropdown_Content {display: none; position: absolute; background-color: rgba(255,255,255,0.9); min-width: 100px; z-index: 1; }
+        .Nav_Bar .Dropdown_Content a {display: block; text-align: left;}
+        .Nav_Bar li.Dropdown:hover .Dropdown_Content {display: block;}
+    </style>
+    <script>
+    
+    </script>
+</head>
+<body>
+    <div class = "Nav_Bar">
+        <ul>
+            <li>
+                <a href ="index.html" class = "Active">Home</a>
+            </li>
+            <li class="Dropdown">
+                <a class = "Active">NFTs</a>
+                    <div class="Dropdown_Content"> 
+                            <a href="3Lau.html">3Lau</a>
+                            <a href="grimes.html">Grimes</a>
+                            <a href="aoki.html">Steve Aoki</a>
+                            <a href="leon.html">King of Leon</a>
+                            <a href="eminem.html">Eminem</a>
+                    </div>
+            </li>
+            <li class="Dropdown">
+                <a class = "Active">Rlease Methods</a>
+                    <div class="Dropdown_Content"> 
+                        <a href="nifty.html">Nifty Gateway</a>
+                        <a href="opensea.html">OpenSea.io</a>
+                    </div>
+            </li>
+            <li>
+                <a href ="drops.html" class = "Active">Current Drops</a>   
+            </li>
+            <li>
+                <a href ="whynft.html" class = "Active">Why NFT</a>   
+            </li>
+            <li>
+                <a href ="contactus.html" class = "Active">Contact Us</a>   
+            </li>
+            <li>
+                <a href ="aboutus.html" class = "Active">About Us</a>   
+            </li>
+        </ul>
+    </div>
+    <form action="mailer.php" method="post">
+		<p>
+		<table>
+			<tr>
+				<td class = "ar">First name:</td>
+				<td><input type="text" name="First Name" size= "30"></td>
+				<td class = "ar">Last Name:</td>
+				<td><input type = "text" name = "Last Name" size = "30"></td>
+			</tr>
+			<tr>
+				<td class = "ar">Gender: </td>
+				<td>
+					Male
+					<input type = "radio" name = "gender" value = "m">
+					Female
+					<input type = "radio" name = "gender" value = "f">
+				</td>
+		</table>
+      
+      
+</body>
+</html>
