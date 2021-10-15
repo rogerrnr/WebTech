@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nifty Gateway</title>
+    <link rel = "stylesheet" href ="stylesheet.css" type = "text/css"/> 
+    
+    
+    <style>
+         .Nav_Bar {position: sticky; top: 0px; left: 0px; width: 100%;}
+        .Nav_Bar ul {list-style-type: none; margin: 0; padding: 0; overflow: auto; background-color: rgba(255,255,255,0.9); border-radius: 5px;}
+        .Nav_Bar li {float: left;}
+        .Nav_Bar li a {display: inline-block; color: black; text-align: center; padding: 15px; text-decoration: none; min-width: 100px; font-weight:lighter;}
+        .Nav_Bar a.Active {background-color:rgba(255,255,255,0.9);}
+        .Nav_Bar li a:hover, .Nav_Bar a.Active:hover {background-color: #318ce7;}
+        .Nav_Bar .Dropdown_Content {display: none; position: absolute; background-color: rgba(255,255,255,0.9); min-width: 100px; z-index: 1; }
+        .Nav_Bar .Dropdown_Content a {display: block; text-align: left;}
+        .Nav_Bar li.Dropdown:hover .Dropdown_Content {display: block;}
+        span{
+            color: #009879 
+        }
+        img{
+            
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+    <script>
+    
+    </script>
+</head>
+<body>
+    <div class = "Nav_Bar">
+        <ul>
+            <li>
+                <a href ="index.html" class = "Active" style = "font-family: sans-serif;">Home</a>
+            </li>
+            <li class="Dropdown">
+                <a class = "Active" style = "font-family: sans-serif;">NFTs</a>
+                    <div class="Dropdown_Content" style = "font-family: sans-serif;"> 
+                            <a href="3Lau.html">3Lau</a>
+                            <a href="grimes.html">Grimes</a>
+                            <a href="aoki.html">Steve Aoki</a>
+                            <a href="leon.html">King of Leon</a>
+                            <a href="eminem.html">Eminem</a>
+                    </div>
+            </li>
+            <li class="Dropdown">
+                <a class = "Active" style = "font-family: sans-serif;">Rlease Methods</a>
+                    <div class="Dropdown_Content"> 
+                        <a href="nifty.html">Nifty Gateway</a>
+                        <a href="opensea.html">OpenSea.io</a>
+                    </div>
+            </li>
+            <li>
+                <a href ="drops.html" class = "Active" style = "font-family: sans-serif;">Current Drops</a>   
+            </li>
+            <li>
+                <a href ="whynft.html" class = "Active" style = "font-family: sans-serif;">Why NFT</a>   
+            </li>
+            <li>
+                <a href ="contactus.html" class = "Active" style = "font-family: sans-serif;">Contact Us</a>   
+            </li>
+            <li>
+                <a href ="aboutus.html" class = "Active" style = "font-family: sans-serif;">About Us</a>   
+            </li>
+        </ul>
+    </div>
+    <img src = "opensea.png" alt = "OpenSea logo"/>
+    <div style = "clear:left;padding-left:100px;padding-right:100px">
+        <h2>OpenSea.io: </h2>
+        <p>OpenSea is the largest a peer-to-peer marketplace for crypto collectibles and non-fungible tokens.</p>
+        <p><a href = "opensea.io" style = "font-size:20pt">Click to Visit!</a></p>
+    </div>
+      
+</body>
+</html>

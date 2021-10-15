@@ -1,0 +1,166 @@
+<!-- requirements: 
+1. Bulleted list in drop.html
+2. Image Map hot spot in aboutus.html
+3. video in grimes.html
+4. audio in index.html
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicNFT Marketcap</title>
+    <link rel = "stylesheet" href ="stylesheet.css" type = "text/css" />
+    
+    <style>
+         .Nav_Bar {position: sticky; top: 0px; left: 0px; width: 100%;}
+        .Nav_Bar ul {list-style-type: none; margin: 0; padding: 0; overflow: auto; background-color: rgba(255,255,255,0.9); border-radius: 5px;}
+        .Nav_Bar li {float: left;}
+        .Nav_Bar li a {display: inline-block; color: black; text-align: center; padding: 15px; text-decoration: none; min-width: 100px; font-weight:lighter;}
+        .Nav_Bar a.Active {background-color:rgba(255,255,255,0.9);}
+        .Nav_Bar li a:hover, .Nav_Bar a.Active:hover {background-color: #318ce7;}
+        .Nav_Bar .Dropdown_Content {display: none; position: absolute; background-color: rgba(255,255,255,0.9); min-width: 100px; z-index: 1; }
+        .Nav_Bar .Dropdown_Content a {display: block; text-align: left;}
+        .Nav_Bar li.Dropdown:hover .Dropdown_Content {display: block;}
+        .content-table {
+            border-collapse: collapse;
+            margin: 50px 0;
+            font-size:1.5em;
+            font-family: sans-serif;
+            min-width:400px;
+            border-radius: 5px 5px 0 0;
+            overflow:hidden;
+            box-shadow: 0 0 2-px rgba(0,0,0,0.15)
+        }
+
+        .content-table thead tr{
+            background-color:#009879;
+            color: #ffffff;
+            text-align:left;
+            font-weight:bold;
+        }
+
+        .content-table th,
+        .contet-table td{
+            padding: 20px 20px;
+            padding-left: 75px;
+            padding-right: 75px;
+        }
+        .content-table td{
+            padding-right: 15px;
+            text-align: center;
+        }
+        .content-table tbody tr{
+            border-bottom: 1px solid #dddddd
+        }
+        .content-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3
+        }
+        .content-table tbody tr:last-of-type{
+            border-bottom: 2px solid #009879
+        }
+        .content-table tbody tr.active-row{
+            font-weight:bold;
+            color: #009879
+        }
+        
+        
+    </style>
+    <script>
+    
+    </script>
+</head>
+<body>
+    <div class = "Nav_Bar">
+        <ul>
+            <li>
+                <a href ="index.html" class = "Active">Home</a>
+            </li>
+            <li class="Dropdown">
+                <a class = "Active">NFTs</a>
+                    <div class="Dropdown_Content"> 
+                            <a href="3Lau.html">3Lau</a>
+                            <a href="grimes.html">Grimes</a>
+                            <a href="aoki.html">Steve Aoki</a>
+                            <a href="leon.html">King of Leon</a>
+                            <a href="eminem.html">Eminem</a>
+                    </div>
+            </li>
+            <li class="Dropdown">
+                <a class = "Active">Rlease Methods</a>
+                    <div class="Dropdown_Content"> 
+                        <a href="nifty.html">Nifty Gateway</a>
+                        <a href="opensea.html">OpenSea.io</a>
+                    </div>
+            </li>
+            <li>
+                <a href ="drops.html" class = "Active">Current Drops</a>   
+            </li>
+            <li>
+                <a href ="whynft.html" class = "Active">Why NFT</a>   
+            </li>
+            <li>
+                <a href ="contactus.html" class = "Active">Contact Us</a>   
+            </li>
+            <li>
+                <a href ="aboutus.html" class = "Active">About Us</a>   
+            </li>
+        </ul>
+    </div>
+    <table class="content-table" style="margin-left:auto;margin-right: auto;">
+        <!-- <caption>Top 5 Most Valuable NFT by Musicians</caption> -->
+        <thead>
+            <tr>
+                <td colspan = "4" style = "text-align: center;">
+                    Top 5 Most Valuable NFT by Musicians
+                </td>
+            </tr>
+            <tr>
+                <th>Rank</th>
+                <th>Artist Name</th>
+                <th>Collection Name</th>
+                <th>Value($)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href = "3lau.html">1</a></td>
+                <td><a href = "3lau.html">3LAU</a></td>
+                <td><a href = "3lau.html">Ultra Violet</a></td>
+                <td style="text-align:right"><a href = "3lau.html">11 million</a></td>
+            </tr>
+            <tr>
+                <td><a href = "grimes.html">2</a></td>
+                <td><a href = "grimes.html">Grimes</a></td>
+                <td><a href = "grimes.html">WarNymph</a></td>
+                <td style="text-align:right"><a href = "grimes.html">6 million</a></td>
+            </tr>
+            <tr>
+                <td><a href = "aoki.html">3</a></td>
+                <td><a href = "aoki.html">Steve Aoki</a></td>
+                <td><a href = "aoki.html">Dream Catcher</a></td>
+                <td style="text-align:right"><a href = "aoki.html">4.25 million</a></td>
+            </tr>
+            <tr>
+                <td><a href = "leon.html">4</a></td>
+                <td><a href = "leon.html">King of Leon</a></td>
+                <td><a href = "leon.html">When You See Yourself</a></td>
+                <td style="text-align:right"><a href = "leon.html">2 million</a></td>
+            </tr>
+            <tr>
+                <td><a href = "eminem.html">5</a></td>
+                <td><a href = "eminem.html">Eminem</a></td>
+                <td><a href = "eminem.html">Shady Con</a></td>
+                <td style="text-align:right"><a href = "eminem.html">1.78 Million</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <div align = center>
+        <audio controls src="teatime.mp3"></audio>  
+    </div>
+    
+
+      
+</body>
+</html>
