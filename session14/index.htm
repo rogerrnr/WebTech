@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>MIS3690 Survey</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<style>
+	td {padding-right:40px}
+	</style>
+	<script> 
+		function processForm(){ 
+			if (document.getElementById("fname").value == "")
+			{
+				alert("First name is required");
+				document.getElementById("fname").focus();
+			}
+			else if (document.getElementById("lname").value == ""){ 
+				alert("Last name is required");
+				document.getElementById("lname").focus();
+			}
+			else if (document.getElementById("images").checked == false && document.getElementById("css").checked == false && document.getElementById("table").checked == false && document.getElementById("form").checked == false)
+			{
+				alert("There is one fun topic required to be checked")
+			}
+			else{ 
+				return true;
+			}
+			return false;
+		}
+
+	</script>
+	
+</head>
+<body>
+	<h1>MIS3690 Student Survey</h1>	
+	<p>Please complete the following survey.  You must answer each question.  When you are done,
+	    please click on the Submit button.</p>
+	<form action="http://wtspring13sec2.babson.edu/gordon/mailer.php" method="post" onsubmit = "return processForm()">
+		<p>
+		<table>
+			<tr>
+				<td class = "ar">First name:</td>
+				<td><input type="text" name="First Name" size= "30" id = "fname"></td>
+				<td class = "ar">Last Name:</td>
+				<td><input type = "text" name = "Last Name" size = "30" id = "lname"></td>
+			</tr>
+			<tr>
+				<td class = "ar">Gender: </td>
+				<td>
+					Male
+					<input type = "radio" name = "gender" value = "m">
+					Female
+					<input type = "radio" name = "gender" value = "f">
+				</td>
+		</table>
+		</p>
+			<p>
+				What grade do you expect to receive?
+				<select name="grade">
+					<option value = "a">A</option>
+					<option value = "b">B</option>
+					<option value = "c">C</option>
+					<option value = "d">D</option>
+				</select>
+			</p>
+			<p>
+				Which topcis did you find to be fun?
+				<input type ="checkbox" name ="img" value = "images" id = "images">
+				Images
+				<input type ="checkbox" name ="css" value = "css"  id = "css">
+				CSS
+				<input type ="checkbox" name ="table" value = "table" id = "table">
+				Table
+				<input type ="checkbox" name ="forms" value = "forms" id = "form">
+				Forms
+			</p>
+			<p>
+				Please add any comments you have
+			</p>
+			<p>
+				<textarea name="comments" row="10" cols="60"></textarea>
+			</p>
+			<p>
+				<input type="submit" name = "Submit" value ="Submit">
+				<input type="reset" name = "Reset" value = "Reset">
+			</p>
+			</tr>
+			
+
+		
+	</form>
+
+</body>
+</html>
