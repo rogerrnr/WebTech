@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All about Roger</title>
+    <link rel = "stylesheet" href ="stylesheet.css" type = "text/css" />
+    <style>
+        h1 {text-shadow:5px 5px 3px red}
+        @font-face {font-family:'fancyfont'; src:url(fancyfont.otf)}
+    h1{font-family:'fancyfont'}
+    </style>
+   
+<script>
+
+    var types = new Array ("Click Me", "Move Me", "Click Here", "Button", "Next")
+    
+    function ChgButton(){
+        var left = Math.floor(1+Math.random()*500)+"px"
+        var top = Math.floor(1+Math.random()*500)+"px"
+        var randnum = Math.floor(1+Math.random()*5)
+        document.getElementById("thebutton").style.backgroundOrigin = top;
+        document.getElementById("thebutton").style.left = left;
+        document.getElementById("thebutton").innerHTML= types[randnum];
+
+    }
+    
+	
+
+</script>
+</head>
+<body>
+    <button id = "thebutton" onclick = "ChgButton()" style = "position:absolute; top:0px; left:0px">Click Me</button>
+    
+</body>
+</html>
