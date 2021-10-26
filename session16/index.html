@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All about Roger</title>
+
+    <script>
+        var counter = 0;
+        var colors = new Array ("red", "orange", "yellow","green","blue", "indigo","violet");
+        function change1Color(){
+            var header = document.getElementById("header"); 
+            header.style.color = colors[counter]
+            counter += 1
+            if(counter == colors.length){
+                counter = 0
+            }
+            setTimeout("change1Color()",1000)
+        
+        }
+
+
+    </script>
+</head>
+<body onload="change1Color()">
+    <h1 id = "header">All about Roger</h1>
+    <p>My hometown in United States is <b>Seattle</b>, and you could best contact me by email or in-person</p>
+    <hr>
+    <img src="Roger_Lin_picture.jfif" alt="picture of Roger" />
+    <a href="interest.html">His Interests</a>
+    <p>An interesting fact about me is that <br>I have two younger sisters and one of them goes to Babson as a sophomore</p>
+    <hr>
+</body>
+</html>

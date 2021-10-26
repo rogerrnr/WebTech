@@ -16,22 +16,31 @@
 
     var types = new Array ("Click Me", "Move Me", "Click Here", "Button", "Next")
     
+    var timer = null;
+    function startAnimation() {
+        if(!timer)timer = setInterval("ChgButton()",750);
+    }
+
+    function stopAnimation() {
+    if (!timer) return false;
+    clearInterval(timer);
+    timer = null;
+    }
+
+
     function ChgButton(){
         var left = Math.floor(1+Math.random()*500)+"px"
         var top = Math.floor(1+Math.random()*500)+"px"
-        var randnum = Math.floor(1+Math.random()*5)
+        var randnum = Math.floor(Math.random()*5)
         document.getElementById("thebutton").style.backgroundOrigin = top;
         document.getElementById("thebutton").style.left = left;
         document.getElementById("thebutton").innerHTML= types[randnum];
 
     }
-    
-	
-
 </script>
 </head>
-<body>
-    <button id = "thebutton" onclick = "ChgButton()" style = "position:absolute; top:0px; left:0px">Click Me</button>
+<body onload = "startAnimation()">
+    <button id = "thebutton" style = "position:absolute; top:0px; left:0px" onclick = "stopAnimation()">Click Me</button>
     
 </body>
 </html>
