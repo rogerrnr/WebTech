@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+       function howOld(){
+        var now = new Date();
+        var nowYear = now.getFullYear();
+        console.log(nowYear)
+        var nowMonth = now.getMonth()+1;
+        var nowDate = now.getDate();
+        var age = nowYear - document.getElementById("yr").value;
+        if(nowMonth < document.getElementById("mo").value){
+            if(nowDate < document.getElementById("day").value){
+                age = age - 1;
+            }
+            age = age - 1;
+        }
+        document.getElementById("age").innerHTML = age;
+       }
+       
+
+    </script>
+</head>
+<body>
+    <p>Enter your birthday below</p>
+    <p>
+        Year
+        <input type = "text" name = "yr" id = "yr" size = "2">
+        &nbsp;&nbsp;&nbsp;&nbsp; Month
+        <input type = "text" name = "mo" id = "mo" size = "2">
+        &nbsp;&nbsp;&nbsp;&nbsp; Day
+        <input type = "text" name = "day" id = "day" size = "2">
+    </p>
+    <p> 
+        <button type = "button" onclick = "howOld()">Calculate</button>
+    </p>
+    <p> 
+        Your are <span id = "age"></span> years old
+    </p>
+</body>
+</html>

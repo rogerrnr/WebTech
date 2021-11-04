@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        
+	function showDateTime()
+	{
+		var mytime = document.getElementById("time");
+		var today=new Date();
+		var h=today.getHours();
+		var m=today.getMinutes();
+		var d=today.toDateString();
+		document.getElementById("date").innerHTML = d;
+		// add a zero in front of minutes < 10
+		if (m < 10)
+		{
+			m = "0"+m
+		}
+        
+        // display the time as AM or PM and the hour as 12 if it's 0
+		if (h == 0)
+		{
+			timeString = "12:" + m + " AM"
+		}
+		else if (h < 12)
+		{
+			timeString = h+":"+m+" AM"
+		}
+		else if (h == 12)
+		{
+			timeString = "12:"+m+" PM"
+		}
+		else
+		{
+			timeString = (h-12) + ":" + m + " PM"
+		}
+        document.getElementById("time").innerHTML = timeString;
+		setTimeout("showDateTime()",60000);
+	}
+	
+    </script>
+</head>
+<body onload = "showDateTime()">
+    <h2> 
+        Today's date is <span id = "date"></span>
+    </h2>
+        The current time is <span id = "time"></span>
+
+    
+    
+</body>
+</html>

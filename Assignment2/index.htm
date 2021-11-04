@@ -22,12 +22,48 @@
 		document.getElementById("table").innerHTML = words[Math.floor(Math.random()*words.length)];
 
 	}
-	
+
 	function question3(){
 		document.getElementById("fun").innerHTML = "difficult"
 		document.getElementById('smile').src = 'frown.jpg';
 	}
+	function question3and1(){
+		document.getElementById("fun").innerHTML = "fun"
+		document.getElementById('smile').src = 'smile.jpg';
+	}
+	function question4(){ 
+		if(document.getElementById("grade").value == "S"){ 
+			alert("Anticipated grade must be selected");
+			return false;
+		}
+		else if(document.getElementById("gpa").value == ""){ 
+			alert("GPA must be entered");
+			return false; 
+		}
+		else if(document.getElementById("gpa").value > 4){
+			alert("GPA must be less than or equal than 4");
+			return false;
+		}
+		else {
+			return true;
+		}
+		
+	}
 	
+	function question5(){
+		let GPAopacity = document.getElementById("target") 
+		// console.log(opa, typeof opa);
+		// console.log("starting...")
+		if(GPAopacity.style.opacity > 0.3 ){ 
+		console.log("timer1...")
+		GPAopacity.style.opacity =  GPAopacity.style.opacity - 0.05
+		console.log(GPAopacity.style.opacity);
+		setTimeout("question5()",200)
+		btoabo
+		
+	}
+	}
+	0
 
 	</script>	
 </head>
@@ -36,9 +72,9 @@
 	<p><span id = "please">Please</span> complete the following survey.  When you are done,
 	    click the Submit button.
 	</p>
-	<form method="post" action="http://wtspring13sec2.babson.edu/gordon/mailer.php">
+	<form method="post" action="http://wtspring13sec2.babson.edu/gordon/mailer.php" onsubmit = "return question4()">
 	   <p>What do you want the next question to be about? &nbsp;&nbsp;&nbsp;Fun 
-		<input type="radio" name="q" value="F" checked="checked" />&nbsp;&nbsp;Difficulty 
+		<input type="radio" name="q" value="F" checked="checked" onclick = "question3and1()"/>&nbsp;&nbsp;Difficulty 
 		<input type="radio" name="q" value="D" id = "difficulty" onclick = "question3()"/>
 		<img src="smile.jpg" id = "smile" alt="mood" style="width:30px; margin-left:40px" />
 	   </p>
@@ -49,7 +85,7 @@
 		<span id = "table">Tables</span> <input type="checkbox" name="fun4" value="t" />
 			   </p>
 	   <p>What grade do you expect to receive? 
-		<select name="grade">
+		<select name="grade" id = "grade">
 			<option value="S">Select Grade</option>
 			<option value="A">A</option>
 			<option value="B">B</option>
@@ -58,13 +94,13 @@
 			<option value="F">F</option>
 		</select>
 	</p>
-	<p>Enter your GPA: <input type="text" name="gpa" size="4" /></p>
+	<p>Enter your <span id = "target" style = "opacity:1;">GPA</span>: <input type="text" id = "gpa" name="gpa" size="4" onfocus = "question5()" /></p>
 	<p style="margin-left:300px">
 		<input type="submit" name="submit" value="Submit" />&nbsp;&nbsp;
 		<input type="reset" name="reset" value="Reset" />
 	</p>
 
-	</form>
+	</form >
 	<p id = "honorCode">I, Roger Lin, have abided by the Babson Code of Ethics in this work and pledge to be <span id ="better">better</span> than that which would compromise my integrity.</p>
 </body>
 </html>
