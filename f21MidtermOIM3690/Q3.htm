@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Question 3</title>
+
+	<style>
+	</style>
+	<script>
+      
+      var year = 2021;
+      var currentValue = 1000;
+
+    function stimulate(){ 
+      var x = document.getElementById("interest").value;
+      var interest = x/100;
+      
+      var interestEarned = currentValue * interest;
+      console.log(x);
+      console.log(interest);
+      console.log(currentValue);
+      console.log(interestEarned);
+      document.getElementById("earned").innerHTML = currentValue * interest;
+      currentValue = currentValue + interestEarned;
+      console.log(currentValue);
+      document.getElementById("value").innerHTML = currentValue;
+      year = year + 1;
+      console.log(year);
+      document.getElementById("year").innerHTML = year;
+      if(year <= 2029){
+        setTimeout("stimulate()", 1000);
+      }
+
+    }
+      </script>
+  </head>
+
+  <body>
+    <h1>Investment Simulation</h1>  
+    <p>We start with an investment of 1000 in 2021. The user should enter an interest rate in the space below and hit the Simulate button. When the button is clicked, the paragraph below the button will change to show the next year, the amount of interest earned, and the value of the investment at the end of the year. The interest earned should be equal to the value of the investment at the end of the previous year times the interest rate. The value of the investment at the end of the year should be its value at the end of the previous year plus the interest earned. So, for example, if the interest rate % is entered as 5, the paragraph should say: In 2022, the interest earned is 50 and the value of the investment is 1050. The simulation should wait two seconds (to give the user time to read) and then should be updated for the next year. At that point, the interest shown would be 52.5 (which is 1050*5/100) and the value of the investment would be 1102.5. The simulation should continue until the year is 2030, at which point the simulation should end. It is not necessary to round the interest or the value of the investment.</p>
+    <p>Interest rate (%): <input type="text" name="i" maxlength="2" size="3" id = "interest"/></p>
+	<p><button onclick= "stimulate()">Simulate</button></p>
+  <p>In <span id = "year">2021</span>, the interest earned is <span id = "earned">0</span> and the value of the investment is <span id = "value">1000</span>.</p>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Question 2</title>
+
+	<style>
+	</style>
+	
+	<script>
+		function fontsizechange(){
+			document.getElementById("paragraph").style.fontSize = "24pt";
+		}
+		function centering(){
+			document.getElementById("header").style.textAlign = "center";
+			document.getElementById("click").innerHTML = "Done";
+		}
+	</script>
+  </head>
+
+  <body>
+	<h1 id ="header">Question 2</h1>
+	<p id = "paragraph" onmouseover = "fontsizechange()">Will Rogers (November 4, 1879 – August 15, 1935) was an American stage and motion picture actor, vaudeville performer, cowboy, humorist, newspaper columnist, and social commentator from Oklahoma. He was a Cherokee citizen born in the Cherokee Nation, Indian Territory.</p>
+      <p><button id = "click" onclick = "centering()">Click Me</button></p>
+  </body>
+</html>

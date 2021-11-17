@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Question 2</title>
+
+	<style>
+	</style>
+		
+	<script>
+	function change(){
+		document.getElementById("clickme").style.color=  "red";
+		document.getElementById("state").innerHTML = "the state of Oklahoma";
+	}	
+	function colorchange(){ 
+		var back = document.getElementById("body");
+		var dropdown = document.getElementById("dropdown");
+		if(dropdown.value == "blue"){
+			back.style.backgroundColor = "blue";
+		}else if (dropdown.value == "green"){
+			document.getElementById("button").style.backgroundColor = "green";
+		}
+
+	}
+	</script>
+  </head>
+
+  <body id = "body">
+	<h1>Question 2</h1>
+	<p>Will Rogers (November 4, 1879 – August 15, 1935) was an American stage and motion picture actor, vaudeville performer, cowboy, humorist, newspaper columnist, and social commentator from <span id = "state">Oklahoma</span>. He was a Cherokee citizen born in the Cherokee Nation, Indian Territory.</p>
+      <p><button onclick = "change()" id = "button"><span id = "clickme">Click Me</span></button></p>
+	  <p>Select background color:<br>
+	<select onchange = "colorchange()" id = "dropdown">
+		<option value="white">White</option>
+		<option value="blue">Blue</option>
+		<option value="green">Green</option>
+	</select></p>
+  </body>
+</html>

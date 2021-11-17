@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Question 3</title>
+
+	<style>
+	img {position:absolute; top:150px; left:50px; width:300px}
+	#r {font-size:18pt; width:90px; height:30px; 
+		background-color:lightblue; text-align:center;
+		position: absolute; top: 90px; left:0px}
+	h1 {margin-left:40px}
+	</style>
+	
+	<script>
+		function clickme(){ 
+			var words = new Array ("Snap", "Crackle", "Pop");
+			var r = document.getElementById("r");
+			r.innerHTML = words[Math.floor(Math.random()*words.length)];
+			if(r.innerHTML = "Snap"){ 
+				r.style.marginLeft = "50px";
+			}else if(r.innerHTML = "Crackle"){
+				r.style.marginLeft = "150px";
+			}else{
+				r.style.marginLeft = "250px";
+			}
+		}
+		function animate(){
+			var words = new Array ("Snap", "Crackle", "Pop");
+			var r = document.getElementById("r");
+			r.innerHTML = words[Math.floor(Math.random()*words.length)]
+			// if(r.innerHTML = "Snap"){ 
+			// 	r.style.marginLeft = "50px";
+			// }else if(r.innerHTML = "Crackle"){
+			// 	r.style.marginLeft = "150px";
+			// }else{
+			// 	r.style.marginLeft = "250px";
+			// }
+			// setTimeout("animate()", 1000);
+
+		}
+      </script>
+  </head>
+
+  <body>
+	<h1>Rice Krispies Characters</h1>
+	<p><button onclick = "clickme()">Click Me</button><button style="margin-left:20px" onclick = "animate()">Animate</button></p>
+	<p id="r">Rice</p>
+	<img src="RKcharacters.jpg" alt="Rice Krispies Characters"/>
+  </body>
+</html>
