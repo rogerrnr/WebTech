@@ -1,0 +1,117 @@
+<!-- line 75 on more.html, I used the attribute clear:left to start the text on a new line and solve the problem between floated pictures and text formats -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris</title>
+    <link rel = "stylesheet" href ="stylesheet.css" type = "text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet">
+    
+    <style>
+        h1 {text-align:center; font-family:Garamond; font-size:32pt;}
+        .Nav_Bar {position: sticky; top: 0px; left: 0px; width: 100%;}
+        .Nav_Bar ul {list-style-type: none; margin: 0; padding: 0; overflow: auto; background-color: rgb(50, 50, 50); border-radius: 5px;}
+        .Nav_Bar li {float: left;}
+        .Nav_Bar li a {display: inline-block; color: white; text-align: center; padding: 15px; text-decoration: none; min-width: 100px; font-weight:lighter;}
+        .Nav_Bar a.Active {background-color:#318ce7;}
+        .Nav_Bar li a:hover, .Nav_Bar a.Active:hover {background-color: red;}
+        .Nav_Bar .Dropdown_Content {display: none; position: absolute; background-color: rgb(50, 50, 50); min-width: 100px; z-index: 1; }
+        .Nav_Bar .Dropdown_Content a {display: block; text-align: left;}
+        .Nav_Bar li.Dropdown:hover .Dropdown_Content {display: block;}
+        span {text-align:center;font-style:italic; font-size: 15px;}
+        table{
+            width:500px; border: 1px solid black
+        }
+        #panel {
+            padding: 50px; 
+            display: none;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#navbar").click(function(){
+                $("#panel").slideDown("slow");
+            })
+            $("h1").click(function(){
+                $("h1").html("<b>Paris</b>");
+            })
+            $("#btn1").click(function(){
+                $("#p1").append("<b>appended text</b>")
+            })
+            $("#btn2").click(function(){
+                $("#p1").after("<p id = 'added'>this is a added paragraph</p>");
+                $("#added").addClass("blue");
+            })
+            $("#btn3").click(function(){
+                $("#div1").animate({left: '300px'});
+            })
+            $("#btn4").click(function(){
+                $("#div1").delay("slow").fadeIn();
+                $("#div2").delay("fast").fadeIn();
+            })
+        })
+    </script>
+</head>
+<body>
+<div class = "Nav_Bar" id = "navbar">
+    <ul>
+        <li>
+            <a href ="index.html" class = "Active">Home</a>
+        </li>
+        <li class="Dropdown">
+            <a href ="more.html" class = "Active">Learn More</a>
+                <div class="Dropdown_Content"> 
+                        <a href="more.html#Architecture">Architecture</a>
+                        <a href="more.html#Arts">Arts</a>
+                        <a href="more.html#Food">Food</a>
+                </div>
+        </li>
+    </ul>
+</div>
+<div id = "panel">Surprise!</div>
+<div id="div1" style="width:90px;height:90px;display:none;background-color:black;"></div><br>
+<div id="div2" style="width:90px;height:90px;display:none;background-color:green;"></div><br>
+<h1 style = "font-family: Bonheur Royale;">
+    Paris &mdash; France
+</h1>
+
+<a href="https://unsplash.com/images/travel/paris">
+    <img src = "EffielTower.jpg" alt = "Paris" class = "center" id = "pic"/>
+</a> 
+<button id = "btn1">Append text</button>
+<button id = "btn2">Add paragraph</button>
+<button id = "btn3">Animate</button>
+<button id = "btn4">delay animation</button>
+
+<p style="margin-right:100px" id = "p1">
+    Paris is the capital and the most populous city of France. Paris has been one of the major centers of finance, diplomacy, commerce, <a href="https://www.vogue.com/tag/event/paris-fashion-week" target ="_blank">fashion</a>, gastronomy, sceince and <a href="https://theculturetrip.com/europe/france/paris/articles/10-world-famous-paintings-you-can-only-see-in-paris/" target="_blank">arts</a> in Europe. </p>
+<p style="margin-right:100px">
+    By hovering my "Learn More" tab, you will learn about the famous destination, food, language, and arts that would be offered by the beautiful city of Paris. 
+</p>
+<p style="margin-right:100px">
+    The reason why I chose Paris as the city for this assignment was because I will be studying abroad in Paris for the last semester of College. I will be heading to HEC Paris, which is in Jouy-en-Josas, a small town right outside of Paris. Although I would try to spend as much time as I can in Paris, the nature surrounding Paris is beautiful as well.  
+</p>
+<p style="text-align:center">
+<span>
+    Try clicking on "HEC Paris" or the "Golf" symbol below!
+</span>
+</p>
+<img src="jouy_map.PNG" alt = "Jouy Map" usemap="#image-map" class="realCenter">
+<map name="image-map">
+    <area target="_blank" alt="Golf" title="Golf" href="https://golfsaintmarc.com/#!" coords="109,282,250,422" shape="rect">
+    <area target="_blank" alt="HEC Paris" title="HEC Paris" href="https://www.hec.edu/en" coords="497,332,355,187" shape="rect">
+</map>
+<p style="clear:left">
+    I have abided by the Babson Code of Ethics in this work and pledge to be better than that which would compromise my integrity
+</p>
+
+</body>
+</html>
