@@ -1,0 +1,249 @@
+<!-- java script requirements: 
+1. click "Header font style change" button changes the header fontstyle to italic - index.html
+2. change text with a button - index.html
+3. form validation - contactus.html
+4. picture rollover - 3lau.html
+5. animating the background color on load - drops.html 
+6. change background color (random colors) with a button - index.html
+Jquery requirements
+1. hide even rows - index.html
+2. show all the hidden rows and highlight it - index.html
+3. showing a hidden message - index.html
+4. hiding the music div - index.html
+  -->
+  <!-- 
+      release 1 recoveries
+      1. all pages pass validation now (5 points lost)
+      2. keywords and descriptions are added for all the pages (3 points lost)
+      3. List in drop.html contains a sublist now (4 points lost)
+      4. contactus.html now has a select tag (1 point lost) 
+   -->
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>MusicNFT Marketcap</title>
+       <meta name = "description" content = "Music NFT information in one website.">
+       <meta name = "keywords" content = "Music, musicNFT, NFT">
+   
+       <link rel = "stylesheet" href ="stylesheet.css" type = "text/css" />
+       
+       <style>
+            .Nav_Bar {position: sticky; top: 0px; left: 0px; width: 100%;}
+           .Nav_Bar ul {list-style-type: none; margin: 0; padding: 0; overflow: auto; background-color: rgba(255,255,255,0.9); border-radius: 5px;}
+           .Nav_Bar li {float: left;}
+           .Nav_Bar li a {display: inline-block; color: black; text-align: center; padding: 15px; text-decoration: none; min-width: 100px; font-weight:lighter;}
+           .Nav_Bar a.Active {background-color:rgba(255,255,255,0.9);}
+           .Nav_Bar li a:hover, .Nav_Bar a.Active:hover {background-color: #318ce7;}
+           .Nav_Bar .Dropdown_Content {display: none; position: absolute; background-color: rgba(255,255,255,0.9); min-width: 100px; z-index: 1; }
+           .Nav_Bar .Dropdown_Content a {display: block; text-align: left;}
+           .Nav_Bar li.Dropdown:hover .Dropdown_Content {display: block;}
+           .content-table {
+               border-collapse: collapse;
+               margin: 50px 0;
+               font-size:1.5em;
+               font-family: sans-serif;
+               min-width:400px;
+               border-radius: 5px 5px 0 0;
+               overflow:hidden;
+               box-shadow: 0 0 2-px rgba(0,0,0,0.15)
+           }
+   
+           .content-table thead tr{
+               background-color:#009879;
+               color: #ffffff;
+               text-align:left;
+               font-weight:bold;
+           }
+   
+           .content-table th,
+           .contet-table td{
+               padding: 20px 20px;
+               padding-left: 75px;
+               padding-right: 75px;
+           }
+           .content-table td{
+               padding-right: 15px;
+               text-align: center;
+           }
+           .content-table tbody tr{
+               border-bottom: 1px solid #dddddd
+           }
+           .content-table tbody tr:nth-of-type(even) {
+               background-color: #f3f3f3
+           }
+           .content-table tbody tr:last-of-type{
+               border-bottom: 2px solid #009879
+           }
+           .content-table tbody tr.active-row{
+               font-weight:bold;
+               color: #009879
+           }
+           
+           
+       </style>
+       <script src = "https://code.jquery.com/jquery.min.js"></script>
+       <script>
+           function changebackground(){
+               var colorList = new Array("red","blue","yellow","green","purple","orange")
+               document.getElementById("body").style.backgroundColor = colorList[Math.floor(Math.random()*colorList.length)];
+           };
+           function changename(){
+               document.getElementById("3lau").innerHTML = "Justin David Blau"
+           };
+           function changefont(){
+               document.getElementById("header").style.fontStyle = "italic";
+           };
+           $(function(){
+               $("#hideeven").click(function(){
+               $("tr:odd").hide();
+           })
+               $("tr").click(function(){
+               $(this).fadeOut(3000);
+           });
+               $("#showall").click(function () {
+               $("tr").show();
+               $("tr:odd").css("background-color", "yellow");
+               
+           });
+               
+           });
+           $(document).ready(function(){
+               $("#showmsg").click(function(){
+                   $("#hiddenmsg").fadeIn(3000);
+               });
+           $("#hidemusic").click(function(){
+                   $("#music").fadeOut("slow");
+               });
+           });
+           
+            var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));  
+	        if (mobile) {  
+        	    document.location="indexmobile.html"
+	        }
+
+
+       </script>
+   </head>
+   <body id = "body">
+       <div class = "Nav_Bar">
+           <ul>
+               <li>
+                   <a href ="index.html" class = "Active">Home</a>
+               </li>
+               <li class="Dropdown">
+                   <a class = "Active">NFTs</a>
+                       <div class="Dropdown_Content"> 
+                               <a href="3Lau.html">3Lau</a>
+                               <a href="grimes.html">Grimes</a>
+                               <a href="aoki.html">Steve Aoki</a>
+                               <a href="leon.html">King of Leon</a>
+                               <a href="eminem.html">Eminem</a>
+                       </div>
+               </li>
+               <li class="Dropdown">
+                   <a class = "Active">Rlease Methods</a>
+                       <div class="Dropdown_Content"> 
+                           <a href="nifty.html">Nifty Gateway</a>
+                           <a href="opensea.html">OpenSea.io</a>
+                       </div>
+               </li>
+               <li>
+                   <a href ="drops.html" class = "Active">Current Drops</a>   
+               </li>
+               <li>
+                   <a href ="whynft.html" class = "Active">Why NFT</a>   
+               </li>
+               <li>
+                   <a href ="contactus.html" class = "Active">Contact Us</a>   
+               </li>
+               <li>
+                   <a href ="aboutus.html" class = "Active">About Us</a>   
+               </li>
+           </ul>
+       </div>
+       <table class="content-table" style="margin-left:auto;margin-right: auto;">
+   
+           <thead>
+               <tr>
+                   <td colspan = "4" style = "text-align: center;" id = "header">
+                       Top 5 Most Valuable NFT by Musicians
+                   </td>
+               </tr>
+               <tr>
+                   <th>Rank</th>
+                   <th>Artist Name</th>
+                   <th>Collection Name</th>
+                   <th>Value($)</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td><a href = "3lau.html">1</a></td>
+                   <td id = "3lau"><a href = "3lau.html">3LAU</a></td>
+                   <td><a href = "3lau.html">Ultra Violet</a></td>
+                   <td style="text-align:right"><a href = "3lau.html">11 million</a></td>
+               </tr>
+               <tr>
+                   <td><a href = "grimes.html">2</a></td>
+                   <td><a href = "grimes.html">Grimes</a></td>
+                   <td><a href = "grimes.html">WarNymph</a></td>
+                   <td style="text-align:right"><a href = "grimes.html">6 million</a></td>
+               </tr>
+               <tr>
+                   <td><a href = "aoki.html">3</a></td>
+                   <td><a href = "aoki.html">Steve Aoki</a></td>
+                   <td><a href = "aoki.html">Dream Catcher</a></td>
+                   <td style="text-align:right"><a href = "aoki.html">4.25 million</a></td>
+               </tr>
+               <tr>
+                   <td><a href = "leon.html">4</a></td>
+                   <td><a href = "leon.html">King of Leon</a></td>
+                   <td><a href = "leon.html">When You See Yourself</a></td>
+                   <td style="text-align:right"><a href = "leon.html">2 million</a></td>
+               </tr>
+               <tr>
+                   <td><a href = "eminem.html">5</a></td>
+                   <td><a href = "eminem.html">Eminem</a></td>
+                   <td><a href = "eminem.html">Shady Con</a></td>
+                   <td style="text-align:right"><a href = "eminem.html">1.78 Million</a></td>
+               </tr>
+           </tbody>
+       </table>
+       <div style = "text-align: center;" id = "music">
+           <audio controls src="teatime.mp3"></audio>
+       </div>
+       <div style = "text-align: center;">
+           <button onclick = "changebackground()">Change Background Color</button>
+       </div>
+       <div style = "text-align: center;">
+           <button onclick = "changename()">Click for 3Lau's real name</button>
+       </div>
+       <div style = "text-align: center;">
+           <button onclick = "changefont()">Header Font Style Change</button>
+       </div>
+       <div style = "text-align: center;">
+           <button id = "hideeven">Hide Even Rows</button>
+       </div>
+       <div style = "text-align: center;">
+           <button id = "showall">Show All</button>
+       </div>
+       <div style = "text-align: center;">
+           <button id = "showmsg">Click to see the most recent Music NFT news</button>
+       </div> 
+       <div style = "text-align: center;">
+           <button id = "hidemusic">Click to hide music</button>
+       </div>
+   
+       <div id = "hiddenmsg" style = "display: none; text-align: center;">
+           <p>Royal (Music NFT platform) just raised 55 million investment led by A16Z (Andreessen Horowitz)</p>
+       </div>
+   
+       
+       
+   
+         
+   </body>
+   </html>
