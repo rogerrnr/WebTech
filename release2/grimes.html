@@ -30,7 +30,12 @@
         }
     </style>
     <script>
-    
+        function changepic(){ 
+        document.getElementById("warnymph").src = "warnymph2.jpg";
+    }
+    function returnpic(){
+        document.getElementById("warnymph").src = "warnymph.jpg";
+    }
     </script>
 </head>
 <body>
@@ -70,7 +75,7 @@
             </li>
         </ul>
     </div>
-    <img src = "warnymph.jpg" alt = "WarNymph" style = "float:left" width = "300" height = "300"/>
+    <img src = "warnymph.jpg" id = "warnymph" alt = "WarNymph" onmouseover = "changepic()" onmouseout = "returnpic()" style = "float:left" width = "300" height = "300"/>
 <div style = "margin-top:50px">
     <h1><span>Collection Name:</span> <b>WarNymph</b></h1> 
     <h1><span>Value:</span> <b>$6 million (10 piece series)</b></h1>
