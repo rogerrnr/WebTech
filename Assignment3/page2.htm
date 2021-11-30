@@ -17,6 +17,10 @@
 	
 	<script src="https://code.jquery.com/jquery.min.js"></script>
 	<script>
+		var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));  
+	if (mobile) {  
+         document.location="page2mobile.htm"
+	}
 		$(document).ready(function(){
 			$(function(){
 				$("#logo").animate({left: '420px'},3000);
@@ -26,7 +30,7 @@
 			$(function(){
 				$("#btn1").click(function(){
 					$("#btn1").fadeOut(3000);
-					$("#p1").css("width", "300px");
+					$("#p1").animate({width: "300px"}, 3000);
 				});
 				$("#btn2").click(function(){
 					$("#btn2").fadeOut(3000);
